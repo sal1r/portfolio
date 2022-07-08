@@ -65,22 +65,18 @@ p, a {
 	color: #d72323;
 }
 
-#main {
-	height: 3000px;
-	background-color: #3a4750;
-	display: block;
-	position: absolute;
-	top: 0;
-	bottom: 0;
-	right: 0;
-	left: 0;
-	overflow: auto;
-}
-
 #head_separator {
 	display: block;
 	height: 8vh;
 	width: 100%;
+}
+
+#main {
+	height: 3000px;
+	background-color: #3a4750;
+	display: block;
+	width: 100%;
+	overflow: auto;
 }
 
 .separator1 {

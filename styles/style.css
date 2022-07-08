@@ -2,7 +2,7 @@
 	font-family: 'Artico';
 	font-style: normal;
 	font-weight: normal;
-	src: local('Artico'), url('./fonts/Artico.woff') format('woff');
+	src: local('Artico'), url('../fonts/Artico.woff') format('woff');
 }
 
 @font-face {

@@ -19,20 +19,56 @@
 	src: local('Artico'), url('../fonts/Artico Medium.woff') format('woff');
 }
 
-$text: #eeeeee;
+$head: #f9ed69;
+$text: #000000;
 $second: #d72323;
-$main: #3a4750;
-$head: #303841;
+$border: #e9b8bf;
+$main: #fffff1;
+$shadow: rgb(150, 150, 150);
 
-$alert_head_height: 6vh;
+$text_old: #eeeeee;
+$second_old: #d72323;
+$border_old: #e9b8bf;
+$main_old: #3a4750;
+$head_old: #303841;
+
+$alert_head_height: 4vh;
 $alert_height: 50vh;
 $alert_width: 40vw;
 $alert_head_height_mobile: 4vh;
 $alert_height_mobile: 40vh;
 $alert_width_mobile: 70vw;
 
+@mixin -border {
+	border: {
+		width: 3px;
+		radius: 15px;
+	}
+	box-shadow: 0 0 10px $shadow;
+}
+
+@mixin -border_alert {
+	border: {
+		width: 3px;
+		color: $border;
+		style: solid;
+		radius: 15px;
+	}
+	box-shadow: 0 0 10px black;
+}
+
+@mixin -border_head {
+	border: {
+		width: 3px;
+		bottom-left-radius: 15px;
+		bottom-right-radius: 15px;
+	}
+	box-shadow: 0 0 10px $shadow;
+}
+
 body {
 	margin: 0;
+	background-color: $main;
 }
 
 p, a {
@@ -60,6 +96,8 @@ a {
 }
 
 #alert_body {
+	@include -border_alert();
+	overflow: hidden;
 	display: block;
 	margin: auto;
 	margin-top: calc(50vh - #{$alert_height / 2});
@@ -82,6 +120,7 @@ a {
 	p {
 		display: block;
 		padding: 10px;
+		padding-top: 20px;
 	}
 
 	@media screen and (orientation: portrait) {
@@ -90,6 +129,8 @@ a {
 }
 
 #alert_head {
+
+	box-shadow: 0 0 10px 10px $head;
 	background-color: $head;
 	display: flex;
 	width: 100%;
@@ -113,10 +154,11 @@ a {
 }
 
 #head {
+	@include -border_head();
+	background-color: $head;
 	display: block;
 	position: fixed;
 	height: 8vh;
-	background-color: $head;
 	top: 0;
 	left: 0;
 	right: 0;

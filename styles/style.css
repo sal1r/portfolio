@@ -32,7 +32,8 @@ p {
 }
 
 a {
-  color: #d72323;
+  color: #221f3b;
+  cursor: pointer;
 }
 
 #alert {
@@ -46,8 +47,6 @@ a {
 
 #alert_body {
   border-width: 3px;
-  border-color: #e9b8bf;
-  border-style: solid;
   border-radius: 15px;
   box-shadow: 0 0 10px black;
   overflow: hidden;
@@ -68,7 +67,7 @@ a {
 #alert_content {
   display: block;
   width: 100%;
-  height: calc(50vh - 4vh);
+  height: calc(50vh - 5vh);
   overflow: auto;
 }
 #alert_content p {
@@ -78,7 +77,7 @@ a {
 }
 @media screen and (orientation: portrait) {
   #alert_content {
-    height: calc(40vh - 4vh);
+    height: calc(40vh - 5vh);
   }
 }
 
@@ -87,17 +86,19 @@ a {
   background-color: #f9ed69;
   display: flex;
   width: 100%;
-  height: 4vh;
+  height: 5vh;
   align-items: flex-end;
   justify-content: flex-end;
 }
 @media screen and (orientation: portrait) {
   #alert_head {
-    height: 4vh;
+    height: 5vh;
   }
 }
 
 #alert_close {
+  cursor: pointer;
+  margin: 0.5vh;
   display: inline-block;
   height: 4vh;
   -o-object-fit: cover;
@@ -105,7 +106,7 @@ a {
 }
 @media screen and (orientation: portrait) {
   #alert_close {
-    height: 4vh;
+    height: 5vh -1;
   }
 }
 
@@ -140,12 +141,12 @@ a {
 #head_links a:hover {
   -webkit-text-decoration: underline solid 0.5vmin;
           text-decoration: underline solid 0.5vmin;
-  color: #d72323;
+  color: #221f3b;
 }
 #head_links a:active {
   -webkit-text-decoration: underline solid 0.5vmin;
           text-decoration: underline solid 0.5vmin;
-  color: #d72323;
+  color: #221f3b;
 }
 
 #head_separator {

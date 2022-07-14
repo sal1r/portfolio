@@ -21,7 +21,7 @@
 
 $head: #f9ed69;
 $text: #000000;
-$second: #d72323;
+$second: #221f3b;
 $border: #e9b8bf;
 $main: #fffff1;
 $shadow: rgb(150, 150, 150);
@@ -32,10 +32,10 @@ $border_old: #e9b8bf;
 $main_old: #3a4750;
 $head_old: #303841;
 
-$alert_head_height: 4vh;
+$alert_head_height: 5vh;
 $alert_height: 50vh;
 $alert_width: 40vw;
-$alert_head_height_mobile: 4vh;
+$alert_head_height_mobile: 5vh;
 $alert_height_mobile: 40vh;
 $alert_width_mobile: 70vw;
 
@@ -50,8 +50,6 @@ $alert_width_mobile: 70vw;
 @mixin -border_alert {
 	border: {
 		width: 3px;
-		color: $border;
-		style: solid;
 		radius: 15px;
 	}
 	box-shadow: 0 0 10px black;
@@ -83,6 +81,7 @@ p {
 
 a {
 	color: $second;
+	cursor: pointer;
 }
 
 #alert {
@@ -92,7 +91,6 @@ a {
 	bottom: 0;
 	right: 0;
 	background-color: rgba(0, 0, 0, 0.7);
-
 }
 
 #alert_body {
@@ -144,12 +142,14 @@ a {
 }
 
 #alert_close {
+	cursor: pointer;
+	margin: 0.5vh;
 	display: inline-block;
-	height: $alert_head_height;
+	height: $alert_head_height - 1;
 	object-fit: cover;
 
 	@media screen and (orientation: portrait) {
-		height: $alert_head_height_mobile;
+		height: $alert_head_height_mobile -1;
 	}
 }
 
